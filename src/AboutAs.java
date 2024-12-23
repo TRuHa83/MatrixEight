@@ -10,7 +10,7 @@ public class AboutAs {
                     (GitHub: TRuHa83)
                 
                 Repositorio:
-                  - https://github.com/TRuHa83/CursoJava
+                  - https://github.com/TRuHa83/MatrixEight
                 
                 Agradecimientos especiales
                   - Carlos Ramírez Rey
