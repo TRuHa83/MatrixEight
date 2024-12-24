@@ -16,19 +16,7 @@ MatrixEight es un programa en Java que permite manipular y visualizar matrices d
 - Contar cantidad de unos
 - Mostrar filas en base 10
 - Mostrar columnas en base 10
-- Cambiar tamaño de la matriz (2x2, 4x4, 6x6, 8x8)javac src/main/java/es/truha/techdev/MatrixEight.java                                                           ✔ 
-src/main/java/es/truha/techdev/MatrixEight.java:298: error: cannot find symbol
-                    Games.menu(input);
-                    ^
-  symbol:   variable Games
-  location: class MatrixEight
-src/main/java/es/truha/techdev/MatrixEight.java:302: error: cannot find symbol
-                    Options.menu(input);
-                    ^
-  symbol:   variable Options
-  location: class MatrixEight
-2 errors
-
+- Cambiar tamaño de la matriz (2x2, 4x4, 6x6, 8x8)
 - Juegos: 8 Torres, 8 Reinas, Recorrido del Caballo
 
 ## Uso
