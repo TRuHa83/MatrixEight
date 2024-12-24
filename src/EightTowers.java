@@ -52,7 +52,7 @@ public class EightTowers {
         while (loop) {
             Main.printPretty(board);
             System.out.println("[Q] para salir.");
-            System.out.print("introduce coordenadas: ");
+            System.out.print("Introduce coordenadas: ");
             select = input.nextLine().toLowerCase();
             System.out.println();
 

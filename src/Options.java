@@ -12,33 +12,33 @@ public class Options {
         Main.col = length;
     }
 
-    private static void Setup(int opction) {
+    private static void Setup(int option) {
         int length = Main.row;
-        if (length != opction){
+        if (length != option){
             eight = false;
             six = false;
             four = false;
             two = false;
 
-            switch (opction) {
+            switch (option) {
                 case 2:
                     two = true;
-                    resize(opction);
+                    resize(option);
                     break;
 
                 case 4:
                     four = true;
-                    resize(opction);
+                    resize(option);
                     break;
 
                 case 6:
                     six = true;
-                    resize(opction);
+                    resize(option);
                     break;
 
                 case 8:
                     eight = true;
-                    resize(opction);
+                    resize(option);
                     break;
             }
         }

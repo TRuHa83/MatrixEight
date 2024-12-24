@@ -86,7 +86,7 @@ public class EightQueens {
         while (loop) {
             Main.printPretty(board);
             System.out.println("[Q] para salir.");
-            System.out.print("introduce coordenadas: ");
+            System.out.print("Introduce coordenadas: ");
             String select = input.nextLine().toLowerCase();
             System.out.println();
 

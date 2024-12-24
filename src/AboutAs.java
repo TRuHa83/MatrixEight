@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class AboutAs {
     public static void show() throws InterruptedException {
         String credits = """
@@ -8,23 +10,25 @@ public class AboutAs {
                 Desarrollado por:
                   - Sergio Trujillo de la Nuez
                     (GitHub: TRuHa83)
-                
+                \s
                 Repositorio:
                   - https://github.com/TRuHa83/MatrixEight
-                
+                \s
                 Agradecimientos especiales
                   - Carlos Ramírez Rey
-                
-                Versión: 1.0.0
+                \s
+                Versión: 1.0.1
                 Fecha: Diciembre 2024
                 \s
                 ¡GRACIAS POR USAR ESTE PROGRAMA! :)
                 """;
 
+        Random sleep = new Random();
         for (char letter : credits.toCharArray()) {
             System.out.print(letter);
+
             try {
-                Thread.sleep(250);
+                Thread.sleep(sleep.nextInt(50, 250));
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
