@@ -49,6 +49,7 @@ public class Main {
                         if (matriz[r / 2 - 1][c - 1] == 2) value = "♜";
                         if (matriz[r / 2 - 1][c - 1] == 3) value = "♛";
                         if (matriz[r / 2 - 1][c - 1] == 4) value = "♞";
+                        if (matriz[r / 2 - 1][c - 1] == 5) value = "♘";
                         if (cheats) if (matriz[r / 2 - 1][c - 1] == 9) value = "░";
                         System.out.printf("%s │ ", value);
 

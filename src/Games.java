@@ -33,6 +33,7 @@ public class Games {
 
                 case "3":
                     KnightsTour.loop = true;
+                    KnightsTour.firstMove = true;
                     Main.clearMatrix(KnightsTour.board);
                     KnightsTour.game(input);
                     break;

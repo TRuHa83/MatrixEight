@@ -17,8 +17,8 @@ public class AboutAs {
                 Agradecimientos especiales
                   - Carlos Ramírez Rey
                 \s
-                Versión: 1.0.1
-                Fecha: Diciembre 2024
+                Versión: 1.1.2
+                Fecha: Enero 2025
                 \s
                 ¡GRACIAS POR USAR ESTE PROGRAMA! :)
                 """;
