@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Games {
+
+    // Menu lanzador de juegos
     public static void menu(Scanner input) {
         boolean menu = true;
         while (menu) {

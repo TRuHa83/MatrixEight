@@ -8,6 +8,7 @@ public class Main {
     private static final int[] count = new int[2];
     public static boolean cheats = false;
 
+    // Imprime la matriz de forma mas "bonita"
     public static void printPretty(int[][] matriz) {
         int row = matriz.length * 2;
         int col = matriz[0].length + 2;
@@ -45,12 +46,12 @@ public class Main {
 
                     } else {
                         String value = " ";
-                        if (matriz[r / 2 - 1][c - 1] == 1) value = "█";
-                        if (matriz[r / 2 - 1][c - 1] == 2) value = "♜";
-                        if (matriz[r / 2 - 1][c - 1] == 3) value = "♛";
-                        if (matriz[r / 2 - 1][c - 1] == 4) value = "♞";
-                        if (matriz[r / 2 - 1][c - 1] == 5) value = "♘";
-                        if (cheats) if (matriz[r / 2 - 1][c - 1] == 9) value = "░";
+                        if (matriz[r / 2 - 1][c - 1] == 1) value = "█"; // Simbolo de Unos en la matriz
+                        if (matriz[r / 2 - 1][c - 1] == 2) value = "♜"; // Simbolo Torre de juego
+                        if (matriz[r / 2 - 1][c - 1] == 3) value = "♛"; // Simbolo Reina de juego
+                        if (matriz[r / 2 - 1][c - 1] == 4) value = "♞"; // Simbolo Caballo activo de juego
+                        if (matriz[r / 2 - 1][c - 1] == 5) value = "♘"; // Simbolo Caballo de juego
+                        if (cheats) if (matriz[r / 2 - 1][c - 1] == 9) value = "░"; // Ayuda en los juegos
                         System.out.printf("%s │ ", value);
 
                         if (matriz.length == 1) {
@@ -109,6 +110,7 @@ public class Main {
         }
     }
 
+    // Genera una matriz aleatoria
     private static void genMatrix() {
         Random num = new Random();
         for (int f = 0; f < board.length; f++) {
@@ -120,6 +122,7 @@ public class Main {
 
     }
 
+    // Invierte la matriz actual
     private static void invertMatrix(){
         for (int f = 0; f < board.length; f++) {
             for (int c = 0; c < board[f].length; c++) {
@@ -136,6 +139,7 @@ public class Main {
         }
     }
 
+    // Limpia la matriz completa
     public static void clearMatrix(int[][] matriz) {
         for (int[] row : matriz) {
             for (int c = 0; c < row.length; c++) {
@@ -144,6 +148,7 @@ public class Main {
         }
     }
 
+    // Cuenta los ceros o unos existentes en la matriz
     private static void countNum(int value) {
         count[value] = 0;
 
@@ -172,6 +177,7 @@ public class Main {
         System.out.printf("%s en la matriz\n", text);
     }
 
+    // Calcula en Base 10 las filas
     private static void rowBase() {
         int[][] rowbase = new int[1][board.length];
         for (int i = 0; i < rowbase[0].length; i++) rowbase[0][i] = 0;
@@ -187,6 +193,7 @@ public class Main {
         printPretty(rowbase);
     }
 
+    // Calcula en Base 10 las columnas
     private static void columnBase() {
         int[][] colbase = new int[board.length][1];
         for (int i = 0; i < colbase.length; i++) {
@@ -204,23 +211,25 @@ public class Main {
         printPretty(colbase);
     }
 
+    // Interrupción
     public static void presskey(Scanner input) {
         System.out.println("\nPresiona [ENTER] para continuar...");
         input.nextLine();
     }
 
+    // Cambio de tamaño de matriz
     private static void resize() {
         if (board.length != row) {
             board = new int[row][col];
         }
     }
 
+    // Metodo Main
     public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
 
         boolean menu = true;
         while (menu) {
-            // Mostrar menú
             resize();
             System.out.println();
             System.out.println("╔═══════════════════════════════╗");

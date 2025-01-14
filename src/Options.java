@@ -7,11 +7,13 @@ public class Options {
     private static boolean two = false;
     private static boolean cheats = false;
 
+    // Redimensiona la matriz
     private static void resize(int length) {
         Main.row = length;
         Main.col = length;
     }
 
+    // Ajusta el tamaño de la matriz y la memoriza para mostrar
     private static void Setup(int option) {
         int length = Main.row;
         if (length != option){
@@ -44,17 +46,20 @@ public class Options {
         }
     }
 
+    // Activa o desactiva las ayudas en los juegos
     private static void Cheats(){
         cheats = !cheats;
         Main.cheats = cheats;
     }
 
+    // Devuelve el check si está seleccionado
     private static String arrow(boolean value) {
         String text = " ";
         if (value) text = "✔";
         return text;
     }
 
+    // Main de options
     public static void menu(Scanner input) throws InterruptedException {
         boolean menu = true;
         while (menu) {

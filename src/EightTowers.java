@@ -7,7 +7,9 @@ public class EightTowers {
     private static String select;
     private static int count = 0;
 
+    // Define el número del símbolo correspondiente
     private static void addMove() {
+        // Marca la fila y columna completa
         for (int r = 0; r < board[0].length; r++) {
             board[move[0]][r] = 9;
             board[r][move[1]] = 9;
@@ -16,6 +18,7 @@ public class EightTowers {
         board[move[0]][move[1]] = 2;
     }
 
+    // Valida el movimiento seleccionado
     private static boolean validate(String value) {
         try {
             move[0] = value.charAt(0) - 97;
@@ -30,6 +33,7 @@ public class EightTowers {
         }
     }
 
+    // Cuenta las Torres en el tablero
     private static void countEight() {
         count = 0;
         for (int[] row : board) {
@@ -48,6 +52,7 @@ public class EightTowers {
 
     }
 
+    // Loop principal del juego
     public static void game(Scanner input) {
         while (loop) {
             Main.printPretty(board);

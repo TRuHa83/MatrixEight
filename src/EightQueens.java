@@ -5,19 +5,23 @@ public class EightQueens {
     private static final int[] move = {0,0};
     public static boolean loop = true;
 
+    // Define el número del símbolo correspondiente
     private static void addMove() {
         int row = move[0];
         int col = move[1];
 
+        // Marca la fila y columna completa
         for (int r = 0; r < board.length; r++) {
             board[row][r] = 9;
             board[r][col] = 9;
 
+            // Movimiento de la reina
             int[] cor1 = {row-r, col-r};
             int[] cor2 = {row-r, col+r};
             int[] cor3 = {row+r, col-r};
             int[] cor4 = {row+r, col+r};
 
+            // Define el número del símbolo correspondiente
             if (cor1[0] >= 0 && cor1[0] < board.length && cor1[1] >= 0 && cor1[1] < board.length) {
                 board[cor1[0]][cor1[1]] = 9;
             }
@@ -34,6 +38,7 @@ public class EightQueens {
         board[row][col] = 3;
     }
 
+    // Valida el movimiento seleccionado
     private static boolean validate(String value) {
         try {
             move[0] = value.charAt(0) - 97;
@@ -48,6 +53,7 @@ public class EightQueens {
         }
     }
 
+    // Cuenta el número de reinas y determinar si ha acabado el juego
     private static void countMoves() {
         int eight = 0;
         int zeros = 0;
@@ -82,6 +88,7 @@ public class EightQueens {
 
     }
 
+    // Loop principal del juego
     public static void game(Scanner input) {
         while (loop) {
             Main.printPretty(board);

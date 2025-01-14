@@ -6,17 +6,20 @@ public class KnightsTour {
     public static boolean firstMove = true;
     public static boolean loop = true;
 
+    // Define el número del símbolo correspondiente
     private static void addMove() {
         int row = move[0];
         int col = move[1];
 
+        // Marca la fila y columna completa
         for (int[] r : board) {
             for (int c = 0; c < r.length; c++) {
                 if (r[c] == 9) r[c] = 0;
-                if (r[c] == 4) r[c] = 5;
+                if (r[c] == 4) r[c] = 5; // Cambia el simbolo caballo anterior
             }
         }
 
+        // Movimiento del caballo
         int[] pos1 = {row-2, col+1};
         int[] pos2 = {row-2, col-1};
         int[] pos3 = {row+2, col+1};
@@ -26,6 +29,7 @@ public class KnightsTour {
         int[] pos7 = {row-1, col-2};
         int[] pos8 = {row+1, col-2};
 
+        // Define el número del símbolo correspondiente
         if (pos1[0] >= 0 && pos1[0] < board.length && pos1[1] >= 0 && pos1[1] < board.length) {
             if (!(board[pos1[0]][pos1[1]] > 4)) board[pos1[0]][pos1[1]] = 9;
         }
@@ -54,6 +58,7 @@ public class KnightsTour {
         board[row][col] = 4;
     }
 
+    // Valida el movimiento seleccionado
     private static boolean validate(String value) {
         try {
             move[0] = value.charAt(0) - 97;
@@ -69,6 +74,7 @@ public class KnightsTour {
         }
     }
 
+    // Cuenta el número de caballos y determinar si ha acabado el juego
     private static void countMoves() {
         int horse = 0;
         int nine = 0;
@@ -103,6 +109,7 @@ public class KnightsTour {
 
     }
 
+    // Loop principal del juego
     public static void game(Scanner input) {
         while (loop) {
 

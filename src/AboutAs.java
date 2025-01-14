@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class AboutAs {
+    // Muestra los créditos
     public static void show() throws InterruptedException {
         String credits = """
                 ***********************
@@ -17,7 +18,7 @@ public class AboutAs {
                 Agradecimientos especiales
                   - Carlos Ramírez Rey
                 \s
-                Versión: 1.1.2
+                Versión: 1.2.2
                 Fecha: Enero 2025
                 \s
                 ¡GRACIAS POR USAR ESTE PROGRAMA! :)
