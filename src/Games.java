@@ -23,20 +23,20 @@ public class Games {
             switch (option.toLowerCase()) {
                 case "1":
                     EightTowers.loop = true;
-                    Main.clearMatrix(EightTowers.board);
+                    MatrixEight.clearMatrix(EightTowers.board);
                     EightTowers.game(input);
                     break;
 
                 case "2":
                     EightQueens.loop = true;
-                    Main.clearMatrix(EightQueens.board);
+                    MatrixEight.clearMatrix(EightQueens.board);
                     EightQueens.game(input);
                     break;
 
                 case "3":
                     KnightsTour.loop = true;
                     KnightsTour.firstMove = true;
-                    Main.clearMatrix(KnightsTour.board);
+                    MatrixEight.clearMatrix(KnightsTour.board);
                     KnightsTour.game(input);
                     break;
 

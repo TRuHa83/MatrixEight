@@ -81,7 +81,7 @@ public class KnightsTour {
 
         for (int[] row : board) {
             for (int col : row) {
-                if (col == 4) {
+                if (col == 4 || col == 5) {
                     horse++;
                 }
 
@@ -94,16 +94,16 @@ public class KnightsTour {
 
         if (horse == 64) {
             loop = false;
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("ENHORABUENA, HAS GANADO!!");
-            System.out.println("Otro juego?");
+            System.out.println("\nOtro juego?");
 
         } else if (nine == 0) {
             loop = false;
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("OOOHHH!! NO QUEDAN MAS MOVIMIENTOS");
             System.out.printf("Has conseguido un poner total de %s caballos\n", horse);
-            System.out.println("Otro juego?");
+            System.out.println("\nOtro juego?");
 
         }
 
@@ -113,7 +113,7 @@ public class KnightsTour {
     public static void game(Scanner input) {
         while (loop) {
 
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("[Q] para salir.");
             System.out.print("Introduce coordenadas: ");
             String select = input.nextLine().toLowerCase();
@@ -132,7 +132,7 @@ public class KnightsTour {
                     System.out.println("Movimiento erróneo, vuélvalo a internar.");
 
                 }
-                Main.presskey(input);
+                MatrixEight.presskey(input);
             }
         }
     }

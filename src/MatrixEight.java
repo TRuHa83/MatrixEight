@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class MatrixEight {
     public static int row = 8;
     public static int col = 8;
     private static int[][] board = new int[row][col];

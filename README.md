@@ -40,7 +40,7 @@ Compila y ejecuta:
 
 `javac src/*.java`
 
-`java -cp src Main`
+`java -cp src MatrixEight`
 
 ---
 

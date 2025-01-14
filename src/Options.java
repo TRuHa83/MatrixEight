@@ -9,13 +9,13 @@ public class Options {
 
     // Redimensiona la matriz
     private static void resize(int length) {
-        Main.row = length;
-        Main.col = length;
+        MatrixEight.row = length;
+        MatrixEight.col = length;
     }
 
     // Ajusta el tamaño de la matriz y la memoriza para mostrar
     private static void Setup(int option) {
-        int length = Main.row;
+        int length = MatrixEight.row;
         if (length != option){
             eight = false;
             six = false;
@@ -49,7 +49,7 @@ public class Options {
     // Activa o desactiva las ayudas en los juegos
     private static void Cheats(){
         cheats = !cheats;
-        Main.cheats = cheats;
+        MatrixEight.cheats = cheats;
     }
 
     // Devuelve el check si está seleccionado
@@ -64,7 +64,7 @@ public class Options {
         boolean menu = true;
         while (menu) {
             // Mostrar menú
-            Setup(Main.row);
+            Setup(MatrixEight.row);
             System.out.println();
             System.out.println("╔═══════════════════════════════╗");
             System.out.println("║           Opciones            ║");
@@ -108,7 +108,7 @@ public class Options {
 
                 case "a":
                     AboutAs.show();
-                    Main.presskey(input);
+                    MatrixEight.presskey(input);
                     break;
 
                 case "v":

@@ -73,16 +73,16 @@ public class EightQueens {
 
         if (eight == 8) {
             loop = false;
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("ENHORABUENA, HAS GANADO!!");
-            System.out.println("Otro juego?");
+            System.out.println("\nOtro juego?");
 
         } else if (zeros == 0){
             loop = false;
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("OOOHHH!! NO QUEDAN MAS MOVIMIENTOS");
             System.out.printf("Has conseguido un total de %s Reinas\n", eight);
-            System.out.println("Otro juego?");
+            System.out.println("\nOtro juego?");
 
         }
 
@@ -91,7 +91,7 @@ public class EightQueens {
     // Loop principal del juego
     public static void game(Scanner input) {
         while (loop) {
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("[Q] para salir.");
             System.out.print("Introduce coordenadas: ");
             String select = input.nextLine().toLowerCase();
@@ -110,7 +110,7 @@ public class EightQueens {
                     System.out.println("Movimiento erróneo, vuélvalo a internar.");
 
                 }
-                Main.presskey(input);
+                MatrixEight.presskey(input);
             }
         }
     }

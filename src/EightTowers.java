@@ -47,7 +47,7 @@ public class EightTowers {
         if (count == 8) {
             loop = false;
             System.out.println("ENHORABUENA, HAS GANADO!!");
-            System.out.println("Otro juego?");
+            System.out.println("\nOtro juego?");
         }
 
     }
@@ -55,7 +55,7 @@ public class EightTowers {
     // Loop principal del juego
     public static void game(Scanner input) {
         while (loop) {
-            Main.printPretty(board);
+            MatrixEight.printPretty(board);
             System.out.println("[Q] para salir.");
             System.out.print("Introduce coordenadas: ");
             select = input.nextLine().toLowerCase();
@@ -74,7 +74,7 @@ public class EightTowers {
                     System.out.println("Movimiento erróneo, vuélvalo a internar.");
 
                 }
-                Main.presskey(input);
+                MatrixEight.presskey(input);
             }
         }
     }
